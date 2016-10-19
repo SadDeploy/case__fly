@@ -3,9 +3,9 @@
 // ------------------------------------
 
 
-/**
- * clearfix
-*/
+//
+// clearfix
+//
 @mixin clearfix() {
   &:before,
   &:after {
@@ -18,9 +18,9 @@
 }
 
 
-/**
- * center-block
-*/
+//
+// center-block
+//
 @mixin center-block() {
   display: block;
   margin-left: auto;
@@ -28,18 +28,18 @@
 }
 
 
-/**
- * list
-*/
+//
+// list
+//
 @mixin list--unstyled {
   padding-left: 0;
   list-style: none;
 }
 
 
-/**
- * forms
-*/
+//
+// forms
+//
 @mixin form-control-focus($color: $input-border-focus) {
   &:focus {
     border-color: $color;
@@ -59,9 +59,9 @@
 }
 
 
-/**
- * text
-*/
+//
+// text
+//
 @mixin text-emphasis-variant($parent, $color) {
   #{$parent} {
     color: $color;
@@ -80,9 +80,9 @@
 }
 
 
-/**
- * table
-*/
+//
+// table
+//
 @mixin table-row-variant($state, $background) {
   .table tr {
     > td.#{$state},
@@ -104,11 +104,9 @@
 }
 
 
-
-
-/**
- * buttons
-*/
+//
+// buttons
+//
 @mixin button-variant($color, $background, $border) {
   color: $color;
   background-color: $background;
@@ -163,9 +161,9 @@
 
 
 
-/**
- * custom
-*/
+//
+// custom
+//
 @mixin css3-prefix($property, $value) {
   -webkit-#{$property}: #{$value};
   -moz-#{$property}: #{$value};
@@ -173,32 +171,32 @@
   #{$property}: #{$value};
 }
 
-/* box sizing */
+// box sizing
 @mixin box-sizing($type: border-box) {
   @include css3-prefix('box-sizing', $type);
 }
 
-/* box shadow */
+// box shadow
 @mixin box-shadow($shadow...) {
   @include css3-prefix('box-shadow', $shadow);
 }
 
-/* opacity */
+// opacity
 @mixin opacity ($opacity: 0.5) {
   @include css3-prefix('opacity', $opacity);
 }
 
-/* border radius */
+// border radius
 @mixin border-radius($radius: 5px) {
   @include css3-prefix('border-radius', $radius);
 }
 
-/* text shadow */
+// text shadow
 @mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
   @include css3-prefix('text-shadow', $x $y $blur $color);
 }
 
-/* gradient */
+// gradient
 @mixin background-gradient($startColor: #3C3C3C, $endColor: #999999) {
   background-color: $startColor;
   background-image: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
@@ -210,29 +208,29 @@
   filter:            progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', endColorStr='#{$endColor}');
 }
 
-/* transform */
+// transform
 @mixin transform($params) {
   @include css3-prefix('transform', $params);
 }
 
-/* transform-origin */
+// transform-origin
 @mixin transform-origin($params) {
   @include css3-prefix('transform-origin', $params);
 }
 
-/* transform style */
+// transform style
 @mixin transform-style($style: preserve-3d) {
   @include css3-prefix('transform-style', $style);
 }
 
-/* double border */
+// double border
 @mixin double-borders($colorOne: #3C3C3C, $colorTwo: #999999, $radius: 0) {
   border: 1px solid $colorOne;
   @include css3-prefix('box-shadow', 0 0 0 1px $colorTwo);
   @include border-radius( $radius );
 }
 
-/* triple borders */
+// triple borders
 @mixin triple-borders($colorOne: #3C3C3C, $colorTwo: #999999, $colorThree: #000000, $radius: 0) {
   border: 1px solid $colorOne;
 
@@ -241,7 +239,7 @@
   @include css3-prefix('box-shadow', "0 0 0 1px #{$colorTwo}, 0 0 0 2px #{$colorThree}");
 }
 
-/* transition */
+// transition
 @mixin transition($transition...) {
   @if length($transition) == 0 {
     $transition: all 0.3s ease;
@@ -261,7 +259,7 @@
   @include css3-prefix('transition-delay', $delay);
 }
 
-/* keyframes */
+// keyframes
 @mixin keyframes($animation-name) {
   @-webkit-keyframes #{$animation-name} {
     @content;
@@ -280,7 +278,7 @@
   }
 }
 
-/* animation */
+// animation
 @mixin animation($str) {
   @include css3-prefix('animation', $str);
 }

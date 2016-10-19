@@ -2,9 +2,9 @@
 // Base -> Scaffolding
 // --------------------------------------------------
 
-/**
- * Make all elements box-sizing
-*/
+//
+// Make all elements box-sizing
+//
 * {
   &,
   &:before,
@@ -13,9 +13,9 @@
   }
 }
 
-/**
- * Delete focus border
-*/
+//
+// Delete focus border
+//
 a:active, a:focus {outline: none;}
 input, textarea {outline:none;}
 input:active, textarea:active {outline:none;}
@@ -23,23 +23,23 @@ button:active, button:focus {outline: none;}
 :focus {outline:none;}
 button::-moz-focus-inner {border: 0;}
 
-/**
- * Clearfix
-*/
+//
+// Clearfix
+//
 .clearfix {
   @include clearfix();
 }
 
-/**
- * HTML
-*/
+//
+// HTML
+//
 html {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-/**
- * Basic typography styles
-*/
+//
+// Basic typography styles
+//
 body {
   background-color: $base-background;
   color: $base-color;
@@ -53,9 +53,9 @@ section {
   background: $white-lighten;
 }
 
-/**
- * Link
-*/
+//
+// Link
+//
 a {
   color: $link-color;
   @include transition;
@@ -67,9 +67,9 @@ a {
   }
 }
 
-/**
- * Images
-*/
+//
+// Images
+//
 img {
   max-width: 100%;
   height: auto;
@@ -93,9 +93,9 @@ img {
 
 
 
-/**
- * Display none
-*/
+//
+// Display none
+//
 .visually-hidden {
   position: absolute;
   width: 1px;

@@ -1,56 +1,55 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300&subset=latin,cyrillic);
-/**
-*sass/
-*|
-*|– base/
-*|   |– _forms.scss        # Forms rules
-*|   |– _typography.scss   # Typography rules
-*|   |– _buttons.scss      # Buttons
-*|   |– _forms.scss        # Forms
-*|   …                     # Etc.
-*|
-*|– modules/
-*|   |– _carousel.scss     # Carousel
-*|   |– _cover.scss        # Cover
-*|   |– _dropdown.scss     # Dropdown
-*|   …                     # Etc.
-*|
-*|– partials/
-*|   |– _navigation.scss   # Navigation
-*|   |– _grid.scss         # Grid system
-*|   |– _header.scss       # Header
-*|   |– _footer.scss       # Footer
-*|   |– _sidebar.scss      # Sidebar
-*|   …                     # Etc.
-*|
-*|– pages/
-*|   |– _home.scss         # Home specific styles
-*|   |– _contact.scss      # Contact specific styles
-*|   …                     # Etc.
-*|
-*|– themes/
-*|   |– _theme.scss        # Default theme
-*|   |– _admin.scss        # Admin theme
-*|   …                     # Etc.
-*|
-*|– helpers/
-*|   |– _variables.scss    # Sass Variables
-*|   |– _functions.scss    # Sass Functions
-*|   |– _mixins.scss       # Sass Mixins
-*|   |– _placeholders.scss # Sass Placeholders
-*|
-*|– vendors/
-*|   |– _reset.scss         # Reset
-*|   |– _debug.scss         # Debug mode
-*|   …                      # Etc.
-*|
-*`– main.scss              # Main Sass file
-*/
+//
+//sass/
+////
+//– base/
+//   |– _forms.scss        # Forms rules
+//   |– _typography.scss   # Typography rules
+//   |– _buttons.scss      # Buttons
+//   |– _forms.scss        # Forms
+//   …                     # Etc.
+//
+//– modules/
+//   |– _carousel.scss     # Carousel
+//   |– _cover.scss        # Cover
+//   |– _dropdown.scss     # Dropdown
+//   …                     # Etc.
+//
+//– partials/
+//   |– _navigation.scss   # Navigation
+//   |– _grid.scss         # Grid system
+//   |– _header.scss       # Header
+//   |– _footer.scss       # Footer
+//   |– _sidebar.scss      # Sidebar
+//   …                     # Etc.
+//
+//– pages/
+//   |– _home.scss         # Home specific styles
+//   |– _contact.scss      # Contact specific styles
+//   …                     # Etc.
+//
+//– themes/
+//   |– _theme.scss        # Default theme
+//   |– _admin.scss        # Admin theme
+//   …                     # Etc.
+//
+//– helpers/
+//   |– _variables.scss    # Sass Variables
+//   |– _functions.scss    # Sass Functions
+//   |– _mixins.scss       # Sass Mixins
+//   |– _placeholders.scss # Sass Placeholders
+//
+//– vendors/
+//   |– _reset.scss         # Reset
+//   |– _debug.scss         # Debug mode
+//   …                      # Etc.
+//
+//– main.scss              # Main Sass file
+//
 
 
-/**
- * Which objects and abstractions would you like to use?
- */
+//*
+// Which objects and abstractions would you like to use?
 //base
 $use-btn-color:                true!default;
 $use-btn-size:                 true!default;
@@ -74,7 +73,7 @@ $use-this-or-this:             false!default;
 $use-media:                    true!default;
 // grids
 $use-adaptive:                 true!default;
-$use-flexbox:                  false!default;
+$use-flexbox:                  true!default;
 // plugins
 $use-animations:               false!default;
 $debug-mode:                   false!default;

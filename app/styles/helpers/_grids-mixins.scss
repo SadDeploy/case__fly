@@ -4,6 +4,13 @@
 
 @if $use-flexbox == true {
 
+  @mixin container-fixed($gutter: $grid-gutter-width) {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: ($gutter / 2);
+    padding-right: ($gutter / 2);
+  }
+
   @mixin make-row($gutter: $grid-gutter-width) {
     display: -webkit-box;
     display: -moz-box;

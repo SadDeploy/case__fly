@@ -3,11 +3,12 @@
 // ------------------------------------
 
 
-/**
- * Header
-*/
+//
+// Header
+//
 .page-header {
   border-bottom: 1px solid $base-color-darken;
+  @include clearfix();
   &__logo {
     float: left;
     a {text-decoration: none;}
@@ -22,21 +23,21 @@
   }
 }
 .main-nav {
-  margin-top: 9px;
+  margin-top: 8px;
   @media (min-width: $screen-md-min) {
     float: right;
   }
 }
 
-/**
- * Main title
-*/
+//
+// Main title
+//
 .title { }
 
 
-/**
- * old-browser
-*/
+//
+// old-browser
+//
 .browsehappy {
   @extend .container;
 }

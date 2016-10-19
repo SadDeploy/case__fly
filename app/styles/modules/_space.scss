@@ -3,9 +3,9 @@
 // --------------------------------------------------
 
 @if $use-space == true {
-  /**
-   * padding
-  */
+  //
+  // padding
+  //
   $a: 0;
   @while $a < 101 {
     .padtop#{$a} {
@@ -17,9 +17,9 @@
     $a: $a + 10;
   }
 
-  /**
-   * margin
-  */
+  //
+  // margin
+  //
   $b: 0;
   @while $b < 101 {
     .margright#{$b} {

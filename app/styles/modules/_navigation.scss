@@ -151,6 +151,7 @@
 
 .navbar {
   position: relative;
+  @include clearfix();
   @media (min-width: $screen-adaptive-nav) {
     &__left {
       float: left;
