@@ -16,7 +16,7 @@
     "framework",
     "gulp",
     "bower",
-    "jade",
+    "pug",
     "scss"
   ],
   "author": "SadDeploy",
