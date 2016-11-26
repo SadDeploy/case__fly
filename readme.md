@@ -1,6 +1,6 @@
 # Case__fly
 
-> It's a basic template using jade & scss
+> It's a basic template using pug & scss
 
 ## How to install
 
