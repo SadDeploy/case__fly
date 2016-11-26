@@ -1,7 +1,7 @@
 {
   "navigation" : {
-    "Home": {
-      "title": "Home",
+    "Главная": {
+      "title": "Главная",
       "href": "/",
       "subitems": false
     },
