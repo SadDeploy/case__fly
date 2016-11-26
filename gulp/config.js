@@ -174,8 +174,8 @@ module.exports.styles = {
 // Templates task config
 module.exports.templates = {
   
-  src: path.join(app, views, '*.jade'),
-  srcBuild: path.join(tmp, 'jade/*.jade'),
+  src: path.join(app, views, '*.pug'),
+  srcBuild: path.join(tmp, 'pug/*.pug'),
   dest: tmp,
   destBuild: path.join(dist),
   cfg: {
@@ -193,9 +193,9 @@ module.exports.templatesData = {
 };
 
 module.exports.useref = {
-  src: path.join(app, views, '/**/*.jade'),
+  src: path.join(app, views, '/**/*.pug'),
   dest: dist,
-  destJade: path.join(tmp, 'jade'),
+  destPug: path.join(tmp, 'pug'),
   assetsCfg: {
     searchPath : app
   },
@@ -205,8 +205,8 @@ module.exports.useref = {
 // Watch task config
 module.exports.watch = {
   styles: path.join(app, styles, '/**/*.scss'),
-  jade: [
-    path.join(app, views, '/**/*.jade'), 
+  pug: [
+    path.join(app, views, '/**/*.pug'), 
     path.join(app, views, data, '/**/*.json')
   ],
   scripts: path.join(app, scripts, '/**/*.js'),
@@ -223,8 +223,8 @@ module.exports.wiredep = {
       overides: {}
     }
   },
-  jade: {
-    src: path.join(app, views, '/layouts/*.jade'),
+  pug: {
+    src: path.join(app, views, '/layouts/*.pug'),
     dest: path.join(app, views, '/layouts'),
     cfg: {
       exclude: ['modernizr'],

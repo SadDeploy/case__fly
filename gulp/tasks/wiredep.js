@@ -15,13 +15,13 @@ gulp.task('wiredep:sass', 'Inject Bower dependencies to Sass', function() {
     .pipe(gulp.dest(config.wiredep.sass.dest));
 });
 
-// Inject bower components to jade
-gulp.task('wiredep:jade', 'Inject Bower dependencies to Jade', function() {
-  return gulp.src(config.wiredep.jade.src)
+// Inject bower components to pug
+gulp.task('wiredep:pug', 'Inject Bower dependencies to pug', function() {
+  return gulp.src(config.wiredep.pug.src)
     .pipe(plumber(handleError))
-    .pipe(wiredep(config.wiredep.jade.cfg))
-    .pipe(gulp.dest(config.wiredep.jade.dest));
+    .pipe(wiredep(config.wiredep.pug.cfg))
+    .pipe(gulp.dest(config.wiredep.pug.dest));
 });
 
 // Inject bower components
-gulp.task('wiredep', 'Inject Bower dependencies', ['wiredep:sass','wiredep:jade']);
+gulp.task('wiredep', 'Inject Bower dependencies', ['wiredep:sass','wiredep:pug']);

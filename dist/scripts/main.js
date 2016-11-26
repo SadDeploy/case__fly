@@ -3,10 +3,6 @@
 // ready
 $(document).ready(function () {
 
-    // mask phone
-    //$("[name=phone]").mask("+7 (999) 999-9999");
-    // mask phone
-
     // anchor
     $(".anchor").on("click", "a", function (event) {
         event.preventDefault();
@@ -16,55 +12,27 @@ $(document).ready(function () {
     });
     // anchor
 
-    // slider
-    $('.singleItem').slick({
-        arrows: true,
-        dots: false
+    // adaptive menu
+    $('.main-nav__toggle--js').click(function () {
+        $(this).next().slideToggle();
     });
-    //$('.carouseltem').slick({
-    //    centerMode: false,
-    //    infinite: true,
-    //    centerPadding: '20px',
-    //    slidesToShow: 5,
-    //    dots: false,
-    //    arrows: false,
-    //    responsive: [
-    //        {
-    //            breakpoint: 768,
-    //            settings: {
-    //                arrows: false,
-    //                centerMode: true,
-    //                centerPadding: '10px',
-    //                slidesToShow: 3
-    //            }
-    //        },
-    //        {
-    //            breakpoint: 480,
-    //            settings: {
-    //                arrows: false,
-    //                centerMode: true,
-    //                centerPadding: '10px',
-    //                slidesToShow: 1
-    //            }
-    //        }
-    //    ]
-    //});
+    // adaptive menu
+
+    // mask phone {maskedinput}
+    //$("[name=phone]").mask("+7 (999) 999-9999");
+    // mask phone
+
+    // slider {slick-carousel}
+    //$('.slider').slick({});
     // slider
 
-    // select
-    $('select').select2({
-        minimumResultsForSearch: Infinity
-    });
+    // select {select2}
+    //$('select').select2({});
     // select
 
-    // fancybox
-    $('.imageLink').magnificPopup({
-        type: 'image',
-        gallery: {
-            enabled: true
-        }
-    });
-    // fancybox
+    // popup {magnific-popup}
+    //$('.image-gallery').magnificPopup({});
+    // popup
 });
 // ready
 

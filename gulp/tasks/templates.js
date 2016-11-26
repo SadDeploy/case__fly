@@ -1,7 +1,7 @@
 'use strict';
 
 var gulp = require('gulp-help')(require('gulp'));
-var jade = require('gulp-jade');
+var pug = require('gulp-pug');
 var data = require('gulp-data');
 var plumber  = require('gulp-plumber');
 var fs = require('fs');
@@ -18,7 +18,7 @@ var config = require('./../config.js');
 var handleError = require('./../utils/handleError.js');
 var build = require('./../utils/buildHelper.js');
 
-// Compile jade to html
+// Compile pug to html
 
 gulp.task('templates', 'Compile templates', ['templates:prepareData', 'useref'], function() {
   var src = build.isBuild() ? config.templates.srcBuild : config.templates.src;
@@ -29,7 +29,7 @@ gulp.task('templates', 'Compile templates', ['templates:prepareData', 'useref'],
     .pipe(data(function() {
       return JSON.parse(fs.readFileSync(config.templatesData.dataPath));
     }))
-    .pipe(jade(config.templates.cfg))
+    .pipe(pug(config.templates.cfg))
     .pipe(gulp.dest(dest));
   
 });
@@ -42,15 +42,15 @@ gulp.task('templates:prepareData', 'Merge views data', function() {
     .pipe(gulp.dest(config.templatesData.dest));
 });
 
-// Bundle css and js based on build tags in Jade templates
+// Bundle css and js based on build tags in pug templates
 
 gulp.task('useref', 'Bundle CSS and JS based on build tags and copy to `dist/` folder', function () {
   // run useref only in build
   if (build.isBuild()) {
     var assets = useref.assets(config.useref.assetsCfg);
     
-    var jadeFilesOnly = filter(['**/*.jade'], {restore: true});
-    var excludeJade = filter(['**','!**/*.jade']);
+    var pugFilesOnly = filter(['**/*.pug'], {restore: true});
+    var excludePug = filter(['**','!**/*.pug']);
     
     return gulp.src(config.useref.src)
       .pipe(assets)
@@ -59,11 +59,11 @@ gulp.task('useref', 'Bundle CSS and JS based on build tags and copy to `dist/` f
       .pipe(gulpif(config.cacheBust, rev()))
       .pipe(assets.restore())
       .pipe(useref())
-      .pipe(gulpif(config.cacheBust, revReplace({replaceInExtensions: ['.jade', '.css', '.js']})))
-      .pipe(jadeFilesOnly)
-      .pipe(gulp.dest(config.useref.destJade))
-      .pipe(jadeFilesOnly.restore)
-      .pipe(excludeJade)
+      .pipe(gulpif(config.cacheBust, revReplace({replaceInExtensions: ['.pug', '.css', '.js']})))
+      .pipe(pugFilesOnly)
+      .pipe(gulp.dest(config.useref.destPug))
+      .pipe(pugFilesOnly.restore)
+      .pipe(excludePug)
       .pipe(gulp.dest(config.useref.dest))
       .pipe(gulpif(config.cacheBust, rev.manifest(config.useref.revManifestCfg))) // create rev-manifest.json 
       .pipe(gulp.dest(config.useref.dest));
