@@ -235,29 +235,29 @@ input[type="search"] {
   }
 
   // Reset rounded corners
-  .input__group .form--control:first-child,
-  .input__group_addon:first-child,
-  .input__group_btn:first-child > .btn,
-  .input__group_btn:first-child > .btn__group > .btn,
-  .input__group_btn:last-child > .btn__group:not(:last-child) > .btn {
+  .input__group .form-control:first-child,
+  .input__group--addon:first-child,
+  .input__group--btn:first-child > .btn,
+  .input__group--btn:first-child > .btn__group > .btn,
+  .input__group--btn:last-child > .btn__group:not(:last-child) > .btn {
     @include border-right-radius(0);
   }
-  .input__group_addon:first-child {
+  .input__group--addon:first-child {
     border-right: 0;
   }
   .input__group .form-control:last-child,
-  .input__group-addon:last-child,
-  .input__group_btn:last-child > .btn,
-  .input__group_btn:last-child > .btn__group > .btn,
-  .input__group_btn:first-child > .btn:not(:first-child),
-  .input__group_btn:first-child > .btn__group:not(:first-child) > .btn {
+  .input__group--addon:last-child,
+  .input__group--btn:last-child > .btn,
+  .input__group--btn:last-child > .btn__group > .btn,
+  .input__group--btn:first-child > .btn:not(:first-child),
+  .input__group--btn:first-child > .btn__group:not(:first-child) > .btn {
     @include border-left-radius(0);
   }
-  .input__group_addon:last-child {
+  .input__group--addon:last-child {
     border-left: 0;
   }
 
-  .input__group_btn {
+  .input__group--btn {
     position: relative;
     font-size: 0;
     white-space: nowrap;
